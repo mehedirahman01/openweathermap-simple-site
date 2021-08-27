@@ -2,7 +2,7 @@ const loadWeather = async () => {
     const searchField = document.getElementById('search-field')
     const searchFieldText = searchField.value
     searchField.value = ''
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${searchFieldText}&units=metric&APPID=02359e7d1bc37145e30d006a1bd99da0`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchFieldText}&units=metric&APPID=02359e7d1bc37145e30d006a1bd99da0`
     const res = await fetch(url)
     const data = await res.json()
     showWeather(data)
